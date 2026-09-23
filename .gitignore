@@ -1,0 +1,51 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Accidental nested clone of this repository
+/ml_project/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Databases and local app state
+*.db
+*.sqlite
+*.sqlite3
+instance/
+
+# ML/data artifacts
+dataset/
+datasets/
+data/
+models/
+checkpoints/
+*.pkl
+*.pickle
+*.h5
+*.onnx
+*.pt
+*.pth
+
+# Generated media and uploads
+uploads/
+static/uploads/
+*.log
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
