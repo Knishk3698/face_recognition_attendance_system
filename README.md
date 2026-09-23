@@ -24,12 +24,17 @@ A Python face-recognition attendance system that uses a webcam to register stude
 
 ```text
 .
-├── app.py              # Tkinter desktop application
-├── main.py             # Command-line student management flow
-├── database.py         # SQLite schema and database helpers
-├── dataset_manager.py  # Dataset folder and webcam image capture helpers
-├── requirements.txt    # Python dependencies
-└── .gitignore
+|-- back_end/
+|   |-- __init__.py
+|   |-- database.py          # SQLite schema and database helpers
+|   |-- dataset_manager.py   # Dataset folder and webcam image capture helpers
+|   `-- main.py              # Command-line student management flow
+|-- front_end/
+|   |-- __init__.py
+|   `-- app.py               # Tkinter desktop application
+|-- requirements.txt         # Python dependencies
+|-- README.md
+`-- .gitignore
 ```
 
 Runtime files such as `database.db`, `dataset/`, virtual environments, and Python cache folders are intentionally ignored by Git.
@@ -45,8 +50,8 @@ Runtime files such as `database.db`, `dataset/`, virtual environments, and Pytho
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Knishk3698/ml_project.git
-cd ml_project
+git clone https://github.com/Knishk3698/face_recognition_attendance_system.git
+cd face_recognition_attendance_system
 ```
 
 2. Create and activate a virtual environment:
@@ -78,7 +83,7 @@ pip install -r requirements.txt
 Start the desktop application:
 
 ```bash
-python app.py
+python front_end/app.py
 ```
 
 The app provides options to:
@@ -90,7 +95,7 @@ The app provides options to:
 You can also run the command-line student module:
 
 ```bash
-python main.py
+python -m back_end.main
 ```
 
 ## Notes

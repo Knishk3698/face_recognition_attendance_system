@@ -1,4 +1,5 @@
 import os
+import sys
 import tkinter as tk
 from tkinter import messagebox, ttk
 
@@ -6,7 +7,12 @@ import cv2
 import face_recognition
 import numpy as np
 
-from database import (
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
+from back_end.database import (
     add_student,
     create_table,
     get_all_students,
@@ -14,7 +20,7 @@ from database import (
     get_student_by_roll,
     mark_attendance,
 )
-from dataset_manager import create_student_folder
+from back_end.dataset_manager import create_student_folder
 
 
 def load_known_faces():

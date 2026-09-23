@@ -1,5 +1,13 @@
-from database import add_student, create_table, get_all_students, get_student_by_roll
-from dataset_manager import capture_images, create_student_folder
+import os
+import sys
+
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
+from back_end.database import add_student, create_table, get_all_students, get_student_by_roll
+from back_end.dataset_manager import capture_images, create_student_folder
 
 
 def add_student_flow():
